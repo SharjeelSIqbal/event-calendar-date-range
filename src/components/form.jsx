@@ -1,7 +1,7 @@
-import Header from '../components/layout/header'
+import Header from '../components/header'
 import Label from './layout/label'
 import InputDate from './inputDate'
-import Button from '../components/button'
+import Button from './button'
 import layoutStyles from '../css/Layout.module.css'
 import { useReducer } from 'react'
 
@@ -26,17 +26,12 @@ const reducer = (state, action) => {
 
 const handleSubmit = (e) => {
   e.preventDefault()
-  console.log(e.target);
 }
 
 
 const Form = () => {
 
   const handleChange = (e) => {
-    console.log(e.target)
-    if(e.target.name === 'endDate'){
-      console.log(form.startDate - form.endDate)
-    }
     dispatch({
       type:'handle input',
       field: e.target.name,

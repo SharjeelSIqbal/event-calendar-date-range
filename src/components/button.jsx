@@ -1,6 +1,6 @@
 import layoutStyles from '../css/Layout.module.css'
 import Heading from '../components/layout/heading'
-import Icon from '../components/layout/icon'
+import Icon from './icon'
 
 const Button = ({ children }) => (
 

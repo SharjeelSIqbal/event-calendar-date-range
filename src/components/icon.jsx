@@ -1,4 +1,4 @@
-import layoutStyles from '../../css/Layout.module.css'
+import layoutStyles from '../css/Layout.module.css'
 
 const Icon = ({ variant }) => (
   <>

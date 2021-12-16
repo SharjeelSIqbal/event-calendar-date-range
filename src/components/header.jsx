@@ -1,6 +1,6 @@
-import Heading from '../layout/heading'
+import Heading from './layout/heading'
 import Icon from './icon'
-import layoutStyles from '../../css/Layout.module.css'
+import layoutStyles from '../css/Layout.module.css'
 
 
 const Header = () => (
