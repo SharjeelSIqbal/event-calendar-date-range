@@ -2,6 +2,7 @@ import Header from '../components/layout/header'
 import layoutStyles from '../css/Layout.module.css'
 import Label from './layout/label'
 import { useReducer } from 'react'
+import InputDate from './inputDate'
 
 const initialState = {
   where: '',
@@ -41,10 +42,10 @@ const Form = () => {
     <form className={layoutStyles.form}>
       <div className={layoutStyles.inputDiv}>
         <Label name='where'>
-          <input className={layoutStyles.input} type='text' onChange={handleChange} value={form.where} name='where' />
+          <input className={layoutStyles.input} id='where' type='text' onChange={handleChange} value={form.where} name='where' />
         </Label>
         <Label name='people'>
-          <select name='people' id="numPeople" onChange={handleChange}>
+          <select name='people' id="people" onChange={handleChange}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -58,6 +59,11 @@ const Form = () => {
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
+        </Label>
+      </div>
+      <div>
+        <Label name='startDate'>
+          <InputDate handleChange={handleChange} />
         </Label>
       </div>
     </form>
