@@ -5,7 +5,7 @@ import { useReducer } from 'react'
 
 const initialState = {
   where: '',
-  people: '',
+  people: null,
   startDate: Date.now(),
   endDate: null
 }
@@ -26,6 +26,7 @@ const reducer = (state, action) => {
 const Form = () => {
 
   const handleChange = (e) => {
+    console.log(e.target.value)
     dispatch({
       type:'handle input',
       field: e.target.name,
@@ -40,10 +41,10 @@ const Form = () => {
     <form className={layoutStyles.form}>
       <div className={layoutStyles.inputDiv}>
         <Label name='where'>
-          <input className={layoutStyles.input} type='text' handleChange={handleChange} value={form.where} name='where' />
+          <input className={layoutStyles.input} type='text' onChange={handleChange} value={form.where} name='where' />
         </Label>
         <Label name='people'>
-          <select className={layoutStyles} name="people" id="numPeople">
+          <select name='people' id="numPeople" onChange={handleChange}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>

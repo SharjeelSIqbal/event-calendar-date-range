@@ -26,6 +26,7 @@ select {
 input:focus,
 select:focus {
   background-color: whitesmoke;
+  color: black;
 }
 
 
