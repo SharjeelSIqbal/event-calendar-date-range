@@ -75,21 +75,27 @@
 }
 
 .submitDiv {
-  margin-bottom: 2rem;
+
+  margin: .2rem 0 2rem;
 }
 
 .submitButton:hover > .circle {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   height: 5rem;
   width: 100px;
   transition: all .3s ease-in-out;
 }
 
 .submitButton:hover > .circle > svg {
-  width: 50px;
+  width: 35px;
   transition: all .3s ease-in;
 }
 
 .circle {
+  overflow: none;
   display: flex;
   justify-content: center;
   position: absolute;

@@ -5,7 +5,6 @@ import Icon from './icon'
 const Button = ({ children }) => (
 
   <button className={layoutStyles.submitButton}>
-
     <Heading variant='h3' style={{ color: "#FFFFFF" }}>
       {children}
     </Heading>
