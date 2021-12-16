@@ -1,0 +1,37 @@
+body {
+  margin: auto;
+}
+
+svg {
+  fill: #FA619C;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+input,
+select {
+  margin-top: .5rem;
+  background-color: #4C4D4F;
+  border: none;
+  height: 2rem;
+  border-radius: .25rem;
+  color: #fff;
+  outline-color: #FA619C;
+}
+
+
+
+input:focus,
+select:focus {
+  background-color: whitesmoke;
+}
+
+
+
+@media screen and (min-width: 600px) {
+  h1 {
+      font-size: 36px;
+  }
+}

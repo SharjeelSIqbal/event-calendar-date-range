@@ -5,9 +5,11 @@ import layoutStyles from '../../css/Layout.module.css'
 
 const Header = () => (
   <header className={layoutStyles.header}>
-    <Icon variant='sm' />
-    <div className={layoutStyles.headerTitle}>
-      <Heading variant='h2'>Book an Event</Heading>
+    <div className={layoutStyles.iconHeader}>
+      <Icon variant='sm' />
+    </div>
+    <div className={layoutStyles.headerHeading}>
+      <Heading variant='h1'>Book an Event</Heading>
     </div>
   </header>
 )
