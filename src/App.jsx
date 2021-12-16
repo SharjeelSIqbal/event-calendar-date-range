@@ -1,9 +1,12 @@
 import Container from './components/layout/container'
+import Box from './components/layout/box'
 import Form from './components/form'
 
 const App= () => (
   <Container>
-    <Form />
+    <Box>
+      <Form />
+    </Box>
   </Container>
 
 )
