@@ -12,21 +12,17 @@
   background-color: #1F1F1F;
 }
 
-
-.submitDiv {
-  margin-top: 2rem;
-}
-
 .submitButton {
   position: relative;
+  top: 0;
+  left: 0;
   height: 2.5rem;
   width: 100px;
   background-color: #FE5E9D;
   border: none;
   border-radius: .25rem;
-  margin-bottom: 2rem;
+  margin: 0;
 }
-
 
 .form {
   margin: auto;
@@ -78,6 +74,10 @@
   width: 3rem;
 }
 
+.submitDiv {
+  margin-bottom: 2rem;
+}
+
 .submitButton:hover > .circle {
   height: 5rem;
   width: 100px;
@@ -106,7 +106,6 @@
 .circle > svg {
   width: 0;
 }
-
 
 @media only screen and (min-width: 600px) {
   .iconSm {
