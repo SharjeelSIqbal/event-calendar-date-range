@@ -10,6 +10,20 @@ h1 {
     font-size: 24px;
 }
 
+label > h1,
+label > h2,
+label > h3,
+label > h4,
+label > h5,
+label > h6 {
+  padding-left: .1rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: .25srem;
+  border: none;
+}
 
 input,
 select {
@@ -20,6 +34,7 @@ select {
   border-radius: .25rem;
   color: #fff;
   outline-color: #FA619C;
+  padding-left: .5rem;
 }
 
 

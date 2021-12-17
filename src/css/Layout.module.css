@@ -12,17 +12,7 @@
   background-color: #1F1F1F;
 }
 
-.submitButton {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 2.5rem;
-  width: 100px;
-  background-color: #FE5E9D;
-  border: none;
-  border-radius: .25rem;
-  margin: 0;
-}
+
 
 .form {
   margin: auto;
@@ -75,42 +65,68 @@
 }
 
 .submitDiv {
-
   margin: .2rem 0 2rem;
 }
 
-.submitButton:hover > .circle {
-  top: 0;
-  right: 0;
+.submitButton {
+  overflow: hidden;
+  position: relative;
+  /* top: 0;
   left: 0;
   bottom: 0;
-  height: 5rem;
+  right: 0; */
+  height: 2.5rem;
   width: 100px;
+  background-color: #FE5E9D;
+  border: none;
+  border-radius: .25rem;
+  margin: 0;
+
+}
+
+
+.submitButton:hover > .circle {
+  height: 125px;
+  width: 125px;
+  position: absolute;
+  bottom: -42px;
+  left: -12px;
+  transform: scale(1);
+  border-radius: 50%;
+  background-color: white;
   transition: all .3s ease-in-out;
 }
 
 .submitButton:hover > .circle > svg {
-  width: 35px;
+  width: 36px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
   transition: all .3s ease-in;
 }
 
 .circle {
-  overflow: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 25%;
-  left: 25%;
-  right: 25%;
-  bottom: 25%;
-  height: 0;
-  width: 0;
+  left: -10px;
+  bottom: -42px;
+  height: 125px;
+  width: 125px;
+  z-index: 1;
+  transform: scale(0);
   border-radius: 50%;
-  background-color: white;
+  transition: all .3s ease-in-out;
 }
 
 .circle > svg {
   width: 0;
+  transition: all .3s ease-in-out;
 }
 
 @media only screen and (min-width: 600px) {
