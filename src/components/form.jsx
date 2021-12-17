@@ -24,12 +24,23 @@ const reducer = (state, action) => {
     }
 }
 
-const handleSubmit = (e) => {
-  e.preventDefault()
-}
 
 
 const Form = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(!localStorage.getItem('event-data')){
+      localStorage.setItem('event-data', {
+        nextEvent: 2,
+        // events: [{ form, currentEvent:}]
+      })
+    } else {
+      const data = localStorage.getItem('event-data')
+      data.plan.events.push({form, currentEvent: data.nextEvent - 1 })
+      data.plan.nextEvent +=1;
+    }
+  }
 
   const handleChange = (e) => {
     dispatch({

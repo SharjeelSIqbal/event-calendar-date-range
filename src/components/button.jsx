@@ -4,7 +4,7 @@ import Icon from './icon'
 
 const Button = ({ children }) => (
 
-  <button className={layoutStyles.submitButton}>
+  <button type='submit' className={layoutStyles.submitButton}>
     <Heading variant='h3' style={{ color: "#FFFFFF" }}>
       {children}
     </Heading>
@@ -12,6 +12,7 @@ const Button = ({ children }) => (
       <Icon variant={'xs'}></Icon>
     </div>
   </button>
+
 )
 
 
