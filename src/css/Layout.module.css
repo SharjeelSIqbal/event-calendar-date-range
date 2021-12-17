@@ -1,3 +1,5 @@
+
+/* Layout  */
 .container {
   height: 100vh;
   max-width: 500px;
@@ -21,6 +23,7 @@
   gap: 20px;
   grid-column: 1fr;
 }
+
 
 .heading {
   color: #FE5E9D;
@@ -52,6 +55,8 @@
   width: 220px;
 }
 
+/* Icon Size */
+
 .iconXs {
   width: 2rem;
 }
@@ -64,9 +69,14 @@
   width: 3rem;
 }
 
+
+/* Form Adjustments */
+
 .submitDiv {
   margin: .2rem 0 2rem;
 }
+
+/* Button Transitions */
 
 .submitButton {
   overflow: hidden;
@@ -122,6 +132,8 @@
   width: 0;
   transition: all .3s ease-in-out;
 }
+
+/* Mobile responsiveness */
 
 @media only screen and (min-width: 600px) {
   .iconSm {
