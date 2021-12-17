@@ -8,7 +8,6 @@ const App = () => {
     if(!localStorage.getItem('event-data')){
       localStorage.setItem('event-data', JSON.stringify({ nextEvent: 1, eventData: [] }))
     }
-    return
   })
 
   return (

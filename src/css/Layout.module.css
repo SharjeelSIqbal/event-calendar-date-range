@@ -10,9 +10,9 @@
 
 .box{
   background-color: #1F1F1F;
+  box-shadow: 3px 5px #FE5E9D;
+  border-radius: .2rem;
 }
-
-
 
 .form {
   margin: auto;
@@ -71,19 +71,13 @@
 .submitButton {
   overflow: hidden;
   position: relative;
-  /* top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; */
   height: 2.5rem;
   width: 100px;
   background-color: #FE5E9D;
   border: none;
   border-radius: .25rem;
   margin: 0;
-
 }
-
 
 .submitButton:hover > .circle {
   height: 125px;

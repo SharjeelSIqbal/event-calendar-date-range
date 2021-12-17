@@ -11,9 +11,9 @@ const InputDate = ({ handleChange, name }) => {
         id={name}
         name={name}
         type="date"
-        min={name === 'startDate' ? Date.now() : null}
         onChange={handleChange}
         onClick={showCalender}
+        required
       />
     </div>
   )

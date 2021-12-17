@@ -7,8 +7,8 @@ import { useReducer } from 'react'
 
 const initialState = {
   where: '',
-  people: null,
-  startDate: Date.now(),
+  people: 0,
+  startDate: null,
   endDate: null
 }
 
@@ -19,6 +19,8 @@ const reducer = (state, action) => {
         ...state,
         [action.field]: action.payload
       }
+      case 'reset':
+        return initialState
       default:
         return state
     }
@@ -27,14 +29,17 @@ const reducer = (state, action) => {
 
 
 const Form = () => {
+  const [ form, dispatch ] = useReducer(reducer, initialState)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = JSON.parse(localStorage.getItem('event-data'))
-    console.log(data)
     data.eventData.push({form, currentEvent: data.nextEvent - 1 })
     data.nextEvent += 1;
     localStorage.setItem('event-data', JSON.stringify(data))
+
+    dispatch({ type: 'reset' })
+
   }
 
   const handleChange = (e) => {
@@ -45,7 +50,6 @@ const Form = () => {
     })
   }
 
-  const [ form, dispatch ] = useReducer(reducer, initialState)
   return (
     <>
     <Header />
@@ -58,11 +62,12 @@ const Form = () => {
             type='text'
             onChange={handleChange}
             value={form.where}
-            name='where' />
+            name='where'
+            required />
         </Label>
         <Label name='people'>
-          <select name='people' id="people" onChange={handleChange}>
-            <option value={0}>0</option>
+          <select name='people' id="people" onChange={handleChange} required>
+
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>
