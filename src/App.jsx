@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 const App = () => {
   useEffect(() => {
     if(!localStorage.getItem('event-data')){
-      localStorage.setItem('event-data', { nextEvent: 1, eventData: [] })
+      localStorage.setItem('event-data', JSON.stringify({ nextEvent: 1, eventData: [] }))
     }
     return
   })
