@@ -3,10 +3,10 @@ import layoutStyles from '../../css/Layout.module.css'
 
 const e = React.createElement;
 
-const Heading = ({ variant, children, weight }) => (
+const Heading = ({ variant, children, style }) => (
 
   <>
-    {e(variant, {className: layoutStyles.heading, style: weight }, children)}
+    {e(variant, {className: layoutStyles.heading, style: style }, children)}
   </>
 
  )

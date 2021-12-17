@@ -1,20 +1,29 @@
+
+/* Layout  */
 .container {
   height: 100vh;
-  max-width: 95%;
+  max-width: 500px;
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box{
   background-color: #1F1F1F;
+  box-shadow: 3px 5px #FE5E9D;
+  border-radius: .2rem;
 }
 
 .form {
-  margin: auto auto;
-  max-width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items:  center;
-  flex-direction: column;
-
+  margin: auto;
+  max-width: 375px;
+  display: grid;
+  gap: 20px;
+  grid-column: 1fr;
 }
+
 
 .heading {
   color: #FE5E9D;
@@ -38,12 +47,18 @@
 .inputDiv {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
   align-items: center;
 }
 
 .input {
   width: 220px;
+}
+
+/* Icon Size */
+
+.iconXs {
+  width: 2rem;
 }
 
 .iconSm {
@@ -55,7 +70,70 @@
 }
 
 
+/* Form Adjustments */
 
+.submitDiv {
+  margin: .2rem 0 2rem;
+}
+
+/* Button Transitions */
+
+.submitButton {
+  overflow: hidden;
+  position: relative;
+  height: 2.5rem;
+  width: 100px;
+  background-color: #FE5E9D;
+  border: none;
+  border-radius: .25rem;
+  margin: 0;
+}
+
+.submitButton:hover > .circle {
+  height: 125px;
+  width: 125px;
+  position: absolute;
+  bottom: -42px;
+  left: -12px;
+  transform: scale(1);
+  border-radius: 50%;
+  background-color: white;
+  transition: all .3s ease-in-out;
+}
+
+.submitButton:hover > .circle > svg {
+  width: 36px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  transition: all .3s ease-in;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  bottom: -42px;
+  height: 125px;
+  width: 125px;
+  z-index: 1;
+  transform: scale(0);
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.circle > svg {
+  width: 0;
+  transition: all .3s ease-in-out;
+}
+
+/* Mobile responsiveness */
 
 @media only screen and (min-width: 600px) {
   .iconSm {

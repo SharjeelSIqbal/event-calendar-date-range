@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sanchez&display=swap');
+
 body {
   margin: auto;
 }
@@ -10,23 +12,50 @@ h1 {
     font-size: 24px;
 }
 
+label > h1,
+label > h2,
+label > h3,
+label > h4,
+label > h5,
+label > h6 {
+  padding-left: .1rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: .25rem;
+  border: none;
+  box-shadow: 1px 1px #FA619C;
+  transform: translateY(0px);
+  transition: transform .3s. ease;
+}
+
+button:active {
+  transform: translateY(3px);
+  transition: transform .3s ease;
+}
+
 input,
 select {
-  margin-top: .5rem;
+  margin-top: .2rem;
   background-color: #4C4D4F;
   border: none;
   height: 2rem;
   border-radius: .25rem;
   color: #fff;
   outline-color: #FA619C;
+  padding-left: .5rem;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 1px 1px #FA619C;
 }
-
 
 
 input:focus,
 select:focus {
   background-color: whitesmoke;
   color: black;
+  transform: translateY(2px);
+  transition: transform .2s ease;
 }
 
 
